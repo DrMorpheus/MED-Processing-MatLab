@@ -7,3 +7,6 @@ This repository contains various MatLab functions and scripts I have developed t
 Comments and suggestions welcome, but this is my first time, so be gentle.
 
 -MLW
+
+02-Jun-2015: Deleted medload1.m, importmedMLW.m, and importmedfunction.m from working directory to clean up repetitive code.
+03-Jun-2015: Updated DspaceConvert.m for explanatory commenting.
