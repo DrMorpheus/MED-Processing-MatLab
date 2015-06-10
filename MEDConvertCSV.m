@@ -13,7 +13,7 @@ delimiter = ' ';
 fileID = fopen(filename,'r');
 startRow = 8;
 endRow = 11;
-formatSpec = '%*s%f%f%f%f%f%f%f%f%f%f%[^\n\r]';
+formatSpec = '%*s%f%f%f%f%f%f%f%f%f%f%*[^\n\r]';
 % Read calibration data.
 dataArray1 = textscan(fileID, formatSpec, endRow-startRow+1, 'Delimiter', delimiter, 'MultipleDelimsAsOne', true, 'HeaderLines', startRow-1, 'ReturnOnError', false);
 % Allocate imported calibration array to column variable names
