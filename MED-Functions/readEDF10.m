@@ -1,6 +1,6 @@
 % readEDF10 - Function for reading energy calbration data stored in an EDF  
 % file (10 detectors) output via energy calibration in Plot85.
-% Last updated: June 10, 2015
+% Last updated: June 11, 2015
 % Code written by Matthew L. Whitaker
 function readEDF10(filename)
 
@@ -20,7 +20,6 @@ for block=2:length(startRow)
 end
 fclose(fileID);
 % Format data to ECalData specs
-D1=[dataArray{1}(1:4),dataArray{1}(5:8),dataArray{1}(9:12),dataArray{1}(13:16),dataArray{1}(17:20),dataArray{1}(21:24),dataArray{1}(25:28),dataArray{1}(29:32),dataArray{1}(33:36),dataArray{1}(37:40)];
-ECalData=num2cell(D1,[1,10]);
+ECalData=[dataArray{1}(1:4),dataArray{1}(5:8),dataArray{1}(9:12),dataArray{1}(13:16),dataArray{1}(17:20),dataArray{1}(21:24),dataArray{1}(25:28),dataArray{1}(29:32),dataArray{1}(33:36),dataArray{1}(37:40)];
 % Make ECalData available in base workspace
 assignin('base', 'ECalData', ECalData);
