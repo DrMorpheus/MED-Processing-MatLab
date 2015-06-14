@@ -1,5 +1,5 @@
 % readMED - Function for reading raw data from a med file.
-% Last updated: June 11, 2015
+% Last updated: June 14, 2015
 % Code written by Matthew L. Whitaker
 function readMED(filename)
 
@@ -46,5 +46,5 @@ frewind(fileID);
 % Read diffraction data
 medDataRaw = textscan(fileID, formatSpec, 'Delimiter', delimiter, 'EmptyValue' ,NaN,'HeaderLines' ,startRow-1, 'ReturnOnError', false);
 fclose(fileID);
-% Make medData available in base workspace
+% Make raw MED data available in base workspace
 assignin('base', 'medDataRaw', medDataRaw);
